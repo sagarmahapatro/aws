@@ -1,0 +1,120 @@
+vpc
+
+
+ID:
+vpc-cb63abaf
+Network ACL: acl-ca01d0ae
+State: 
+available Tenancy: 
+Default
+VPC CIDR: 172.31.0.0/16
+DNS resolution: yes
+DHCP options set: dopt-7344bd16
+DNS hostnames:yes
+Route table: rtb-3bad145f
+
+instance
+
+Instance ID i-bf68c46b
+Public DNS
+-
+Instance state
+running
+Public IP
+Instance type t1.micro
+Elastic IP
+-
+Private DNS ip-172-31-0-145.ec2.internal
+Availability zone us-east-1c
+Private IPs 172.31.0.145
+Security groups
+sq-EC2WebSecurityGroup. view rules
+Secondary private IPs
+Scheduled events
+No scheduled events
+VPC ID vpc-cb63abaf
+AMI ID ubuntu-trusty-14.04-amd64-server-20150325 (ami-d85e75b0)
+Subnet ID subnet-9cf6e1eb
+Platform
+-
+Network interfaces
+eth0
+IAM role ec2Instances
+Source/dest. check True
+Key pair name ec2AccessKeyNew
+Owner 598414866439
+EBS-optimized False
+Launch time
+October 12, 2015 at 11:43:05 AM UTC+5:30 (less than one hour)
+Root device type ebs
+Termination protection True
+Root device /dev/sda1
+Lifecycle normal
+Block devices /dev/sda1
+Monitoring basic
+Alarm status
+None
+Kernel ID aki-919dcaf8
+RAM disk ID
+-
+Placement group
+-
+Virtualization paravirtual
+Reservation r-47b1e2ba
+AMI launch index 0
+Tenancy default
+State transition reason
+-
+
+--------------------------
+public information
+
+Public DNS ec2-52-3-116-212.compute-1.amazonaws.com
+Instance state running
+Public IP 52.3.116.212
+Elastic IP 52.3.116.212
+
+--------------------------------------------------------------------
+
+db end point
+ a1ecommerce.cqt8vimty3cv.us-east-1.rds.amazonaws.com:3306 
+ 
+ 
+ http://ec2-52-3-116-212.compute-1.amazonaws.com:8080/a1ecommerce
+ --------------------------------------------------------------
+ 
+ A1ElectonicsEcommerce-ELB-us-east1c
+ 
+ ELB-us-east1c
+ 
+  Define Load Balancer Edit load balancer definition
+Load Balancer name:	a1electronicsecommerce-elb
+Scheme:	internet-facing
+Port Configuration:	8080 (HTTP) forwarding to 8080 (HTTP)
+ Configure Health Check Edit health check
+Ping Target:	HTTP:8080/index.html
+Timeout:	5 seconds
+Interval:	30 seconds
+Unhealthy Threshold:	2
+Healthy Threshold:	10
+ Add EC2 Instances Edit instances
+Cross-Zone Load Balancing:	Enabled
+Connection Draining:	Enabled, 300 seconds
+Instances:	i-bf68c46b (A1ElectronicsEcommerce)
+ VPC Information Edit subnets
+VPC:	vpc-cb63abaf
+Subnets:	subnet-9cf6e1eb
+ Security Groups Edit security groups
+Security Groups:	sg-674fba01
+ Add Tags Edit tags
+Name:	A1ElectonicsEcommerce-ELB-us-east1c
+
+a1electronicsecommerce-elb-2134566236.us-east-1.elb.amazonaws.com
+
+
+
+go directly to https://console.aws.amazon.com/sns/home?region=us-east-1#dashboard and for cloud watch alarms, 
+https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#
+
+
+is http://a1electronicsecommerce-elb-2134566236.us-east-1.elb.amazonaws.com:8080
